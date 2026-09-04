@@ -2,53 +2,377 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Inusha's Birthday Universe 🎂</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080018">
+<title>Shree Krishna Janmashtami — V11 Seamless Divine Engine</title>
 <style>
-:root{--pink:#ff3d81;--purple:#7c4dff;--blue:#3db8ff;--gold:#ffd166;--green:#38e0b8;--dark:#060713;--glass:rgba(255,255,255,.08);--border:rgba(255,255,255,.14)}
-*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Segoe UI,Arial,sans-serif}html{scroll-behavior:smooth}
-body{min-height:100vh;color:#fff;overflow-x:hidden;background:radial-gradient(circle at 15% 20%,#29175d 0%,transparent 30%),radial-gradient(circle at 85% 75%,#4d1038 0%,transparent 30%),linear-gradient(135deg,#050611,#10142d)}
-#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}.stars{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle var(--d) infinite ease-in-out}@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1.8)}}
-.loader{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#050611;transition:1s ease}.loader.hidden{opacity:0;pointer-events:none}.loader h1{font-size:clamp(2rem,8vw,5rem);background:linear-gradient(135deg,#fff,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.loadbar{width:min(280px,75vw);height:6px;background:rgba(255,255,255,.1);border-radius:50px;overflow:hidden;margin-top:25px}.loadbar span{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--purple),var(--gold));animation:load 2.2s ease forwards}@keyframes load{to{width:100%}}
-.nav{position:fixed;z-index:100;top:18px;left:50%;transform:translateX(-50%);display:flex;gap:4px;padding:8px;max-width:94vw;overflow:auto;background:rgba(8,10,28,.72);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:50px}.nav button{border:0;white-space:nowrap;color:#aeb4cf;background:transparent;padding:10px 14px;border-radius:30px;cursor:pointer;transition:.25s}.nav button:hover,.nav button.active{color:#fff;background:rgba(255,255,255,.12)}
-.page{display:none;min-height:100vh;padding:110px 18px 50px;justify-content:center;align-items:center;position:relative;z-index:2}.page.active{display:flex;animation:enter .65s ease forwards}@keyframes enter{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:none}}
-.panel{width:min(950px,100%);padding:clamp(28px,5vw,55px);text-align:center;border-radius:32px;background:linear-gradient(135deg,rgba(255,255,255,.11),rgba(255,255,255,.025));border:1px solid var(--border);backdrop-filter:blur(20px);box-shadow:0 30px 90px rgba(0,0,0,.45)}.badge{display:inline-block;padding:8px 16px;border-radius:50px;color:var(--gold);font-size:.75rem;letter-spacing:2px;background:rgba(255,255,255,.07);margin-bottom:18px}.title{font-size:clamp(2.8rem,9vw,6rem);line-height:1;margin-bottom:20px;font-weight:900;background:linear-gradient(135deg,#fff 20%,var(--pink) 60%,var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.subtitle{color:#b8c0db;max-width:680px;margin:auto;line-height:1.7}.typing{min-height:55px;margin-top:20px;font-size:clamp(1.05rem,3vw,1.4rem);color:var(--gold)}.cursor{animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
-.buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{border:0;color:#fff;cursor:pointer;padding:14px 26px;border-radius:50px;font-weight:700;transition:.25s}.btn:hover{transform:translateY(-3px) scale(1.03)}.primary{background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 10px 35px rgba(255,61,129,.35)}.secondary{background:rgba(255,255,255,.09);border:1px solid var(--border)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:35px;perspective:1000px}.card{min-height:220px;padding:25px;border-radius:24px;cursor:pointer;transform-style:preserve-3d;background:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.035));border:1px solid var(--border);transition:transform .18s ease;box-shadow:0 15px 40px rgba(0,0,0,.2)}.card .icon{font-size:3.5rem;margin-bottom:15px;transform:translateZ(25px)}.card h3{margin-bottom:10px}.card p{color:#b8c0db;font-size:.9rem;line-height:1.5}
-.balloon-area{position:relative;height:390px;overflow:hidden;border-radius:25px;margin-top:25px}.balloon{position:absolute;width:58px;height:72px;border-radius:50% 50% 48% 48%;cursor:pointer;box-shadow:inset -8px -10px rgba(0,0,0,.15);animation:float linear forwards}.balloon:after{content:"";position:absolute;left:50%;bottom:-45px;width:1px;height:45px;background:rgba(255,255,255,.6)}@keyframes float{from{transform:translateY(430px) rotate(-8deg)}to{transform:translateY(-130px) rotate(10deg)}}.pop{animation:pop .25s ease forwards!important}@keyframes pop{to{transform:scale(1.8);opacity:0}}
-.gift-wrap{margin:35px auto 10px;width:190px;height:190px;cursor:pointer;position:relative}.gift-box{position:absolute;width:170px;height:135px;bottom:0;left:10px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 20px 45px rgba(0,0,0,.35)}.gift-lid{position:absolute;top:30px;left:0;width:190px;height:45px;border-radius:10px;background:linear-gradient(135deg,#ff70a5,#8e6cff);transform-origin:left bottom;transition:.7s cubic-bezier(.2,.8,.2,1)}.ribbon-v{position:absolute;left:50%;transform:translateX(-50%);width:25px;height:100%;background:var(--gold)}.ribbon-h{position:absolute;top:50%;transform:translateY(-50%);width:100%;height:22px;background:var(--gold)}.gift-wrap.open .gift-lid{transform:rotate(-115deg) translate(-30px,-15px)}.gift-message{display:none;margin-top:25px;padding:22px;border-radius:18px;color:var(--gold);background:rgba(255,209,102,.08);border:1px solid rgba(255,209,102,.25)}.gift-message.show{display:block;animation:enter .5s ease}
-.quiz{width:min(600px,100%);margin:30px auto 0;text-align:left}.question{font-size:1.2rem;margin-bottom:18px}.answers{display:grid;gap:10px}.answer{padding:15px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid var(--border);cursor:pointer;transition:.2s}.answer:hover{transform:translateX(7px);background:rgba(255,255,255,.12)}.correct{background:rgba(56,224,184,.3)!important}.wrong{background:rgba(255,61,129,.3)!important}
-.lock{font-size:5rem;animation:lock 2.5s infinite ease-in-out}@keyframes lock{50%{transform:translateY(-12px) rotate(5deg)}}.password-row{display:flex;width:min(450px,100%);margin:30px auto;gap:10px}.password-row input{flex:1;min-width:0;padding:15px;color:#fff;text-align:center;border-radius:50px;border:1px solid var(--border);background:rgba(0,0,0,.3);outline:none}.secret-message{display:none;margin-top:25px;padding:30px;line-height:1.8;border-radius:20px;background:rgba(255,209,102,.08);border:1px solid rgba(255,209,102,.25)}.secret-message.show{display:block;animation:enter .6s ease}
-.achievements{position:fixed;bottom:18px;right:18px;z-index:200;display:flex;flex-direction:column;gap:8px}.achievement{display:none;padding:12px 16px;border-radius:16px;background:rgba(10,12,30,.9);border:1px solid var(--border);backdrop-filter:blur(15px);animation:slide .4s ease}.achievement.show{display:block}@keyframes slide{from{transform:translateX(100px);opacity:0}to{transform:none;opacity:1}}.performance{position:fixed;left:15px;bottom:15px;z-index:100;border:1px solid var(--border);background:rgba(10,12,30,.75);color:#cdd3eb;border-radius:50px;padding:10px 14px;cursor:pointer}body.low-power .star{animation:none;opacity:.5}body.low-power .card{transition:none}body.low-power #fx{display:none}
-@media(max-width:600px){.nav{justify-content:flex-start}.panel{border-radius:24px}.password-row{flex-direction:column}.balloon-area{height:330px}}
+:root{
+  --bg:#06000f;--purple:#7c3cff;--blue:#00d2ff;--gold:#ffd76a;--pink:#ff63c8;
+  --glass:rgba(16,9,39,.48);--line:rgba(255,255,255,.13);--text:#f8f3ff;--muted:#bdb4d6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button{font:inherit;color:inherit}
+#scene{position:fixed;inset:0;width:100%;height:100%;display:block}
+#vignette{position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 48%,transparent 28%,rgba(3,0,9,.2) 62%,rgba(0,0,0,.75));z-index:2}
+#aurora{position:fixed;inset:-20%;pointer-events:none;z-index:1;filter:blur(45px);opacity:.45}
+#aurora:before,#aurora:after{content:"";position:absolute;width:60vw;height:35vh;border-radius:50%;mix-blend-mode:screen;animation:aurora 12s ease-in-out infinite alternate}
+#aurora:before{left:5%;top:5%;background:radial-gradient(ellipse,#5d1cff55,transparent 65%)}
+#aurora:after{right:0;top:12%;background:radial-gradient(ellipse,#00d2ff44,transparent 65%);animation-delay:-4s}
+@keyframes aurora{to{transform:translate(8vw,4vh) rotate(8deg) scale(1.15)}}
+
+.topbar{
+ position:fixed;z-index:10;left:16px;right:16px;top:14px;height:58px;
+ display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 16px;
+ border:1px solid var(--line);border-radius:20px;background:rgba(8,3,24,.52);
+ backdrop-filter:blur(22px);box-shadow:0 10px 45px #0007,inset 0 0 30px #7c3cff0b
+}
+.brand{display:flex;align-items:center;gap:10px;letter-spacing:.12em;text-transform:uppercase;font-size:11px;font-weight:800}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 18px var(--blue);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.5);opacity:.65}}
+.controls{display:flex;gap:7px}
+.btn{
+ border:1px solid #ffffff1c;background:#ffffff09;border-radius:13px;padding:9px 12px;
+ cursor:pointer;transition:.2s;backdrop-filter:blur(12px);font-size:12px;font-weight:700
+}
+.btn:hover{background:#ffffff17;transform:translateY(-1px);border-color:#ffffff38}
+.btn.active{border-color:#00d2ff77;box-shadow:0 0 18px #00d2ff22;color:#8cecff}
+
+.hero{
+ position:fixed;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);
+ width:min(940px,92vw);text-align:center;pointer-events:none
+}
+.om{font-size:clamp(46px,7vw,88px);line-height:.9;color:var(--gold);text-shadow:0 0 12px #ffd76a,0 0 55px #ff9f2f88;animation:om 3s ease-in-out infinite}
+@keyframes om{50%{text-shadow:0 0 22px #ffd76a,0 0 90px #ff9f2fbb;transform:scale(1.03)}}
+.kicker{margin-top:13px;color:#8deeff;font-size:clamp(9px,1.2vw,12px);font-weight:800;letter-spacing:.45em;text-transform:uppercase}
+h1{
+ margin:10px 0 4px;font-family:Georgia,serif;font-weight:700;font-size:clamp(34px,7vw,78px);
+ line-height:1.02;letter-spacing:.015em;
+ background:linear-gradient(90deg,#fff,#ffd76a,#fff,#8eeeff,#fff);background-size:250% auto;
+ -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite
+}
+@keyframes shine{to{background-position:250% center}}
+.subtitle{color:#d7cdec;font-size:clamp(11px,1.7vw,15px);letter-spacing:.14em}
+.divider{width:min(400px,55vw);height:1px;margin:18px auto;background:linear-gradient(90deg,transparent,#ffd76a,#00d2ff,transparent);box-shadow:0 0 18px #00d2ff66}
+
+.panel{
+ position:fixed;z-index:8;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(24px);
+ border-radius:20px;box-shadow:0 16px 55px #0008,inset 0 0 40px #ffffff04
+}
+.left{left:16px;bottom:16px;width:260px;padding:14px}
+.right{right:16px;bottom:16px;width:260px;padding:14px}
+.panel-title{font-size:10px;text-transform:uppercase;letter-spacing:.22em;color:#9fa1bd;margin-bottom:11px}
+.stat{display:flex;justify-content:space-between;padding:6px 0;font-size:11px;color:#c9c3d8;border-bottom:1px solid #ffffff08}
+.stat b{color:#fff}
+.meter{height:5px;border-radius:8px;background:#ffffff0d;overflow:hidden;margin-top:8px}
+.meter i{display:block;height:100%;width:72%;background:linear-gradient(90deg,#7c3cff,#00d2ff);box-shadow:0 0 12px #00d2ff;transition:width .3s}
+.action{display:flex;gap:7px;flex-wrap:wrap}
+.action .btn{flex:1;min-width:100px}
+.tip{margin-top:9px;font-size:10px;color:#9d96af;line-height:1.5}
+
+.center-controls{
+ position:fixed;z-index:9;left:50%;bottom:24px;transform:translateX(-50%);
+ display:flex;gap:8px;padding:8px;border-radius:18px;border:1px solid var(--line);
+ background:#08031899;backdrop-filter:blur(20px);box-shadow:0 12px 40px #0008
+}
+.center-controls .btn{white-space:nowrap}
+
+.badge{
+ position:fixed;z-index:8;top:88px;left:50%;transform:translateX(-50%);
+ border:1px solid #ffd76a33;background:#120b2599;padding:7px 12px;border-radius:99px;
+ font-size:10px;letter-spacing:.18em;color:#f8df99;backdrop-filter:blur(14px)
+}
+#toast{position:fixed;z-index:30;left:50%;top:18%;transform:translate(-50%,-20px);opacity:0;
+ padding:11px 15px;border-radius:13px;background:#100820e8;border:1px solid #ffffff20;backdrop-filter:blur(18px);
+ font-size:12px;transition:.35s;pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(max-width:720px){
+ .topbar{left:9px;right:9px;top:9px;height:50px;border-radius:16px;padding:6px 8px 6px 12px}
+ .brand{font-size:9px}.controls .btn{padding:7px 9px;font-size:10px}
+ .hero{top:47%;width:94vw}.kicker{letter-spacing:.25em}
+ .left,.right{width:auto;bottom:9px}.left{left:9px;right:calc(50% + 5px)}.right{left:calc(50% + 5px);right:9px}
+ .panel{padding:10px;border-radius:15px}.panel-title{margin-bottom:6px}.stat{padding:3px 0;font-size:9px}
+ .tip{display:none}.center-controls{bottom:108px;padding:6px;border-radius:15px}.center-controls .btn{min-width:0;padding:8px 10px}
+ .center-controls .extra{display:none}.badge{top:69px}
+}
+@media(max-width:430px){
+ .brand span{display:none}.hero{top:45%}h1{font-size:35px}.subtitle{font-size:9px}.divider{margin:12px auto}
+ .left,.right{font-size:8px}.panel-title{font-size:8px}.stat{font-size:8px}
+ .center-controls{bottom:105px}.center-controls .btn{font-size:9px;padding:8px}
+}
 </style>
 </head>
 <body>
-<div class="loader" id="loader"><h1>INUSHA'S UNIVERSE</h1><div class="loadbar"><span></span></div></div>
-<div class="stars" id="stars"></div><canvas id="fx"></canvas>
-<nav class="nav"><button class="active" data-page="home">Home</button><button data-page="universe">Universe</button><button data-page="balloons">Balloons</button><button data-page="gift">Gift</button><button data-page="quiz">Quiz</button><button data-page="secret">Secret</button></nav>
-<button class="performance" id="performance">⚡ Performance</button><div class="achievements" id="achievements"></div>
-<section class="page active" id="home"><div class="panel"><div class="badge">🎂 SEPTEMBER 2, 2026</div><h1 class="title">Happy Birthday<br>Inusha! 🎉</h1><p class="subtitle">Welcome to something more than a birthday website. This is your own little digital universe, filled with surprises, games, hidden messages and celebrations.</p><div class="typing"><span id="typing"></span><span class="cursor">|</span></div><div class="buttons"><button class="btn primary" onclick="go('universe')">Enter The Universe 🚀</button><button class="btn secondary" onclick="burst()">Fireworks 🎆</button></div></div></section>
-<section class="page" id="universe"><div class="panel"><div class="badge">🌌 EXPLORE</div><h2 class="title">Birthday Universe</h2><p class="subtitle">Touch or move over the cards and explore the birthday energy.</p><div class="cards"><div class="card"><div class="icon">🎂</div><h3>Make A Wish</h3><p>A new year means new dreams waiting to become reality.</p></div><div class="card"><div class="icon">💖</div><h3>Special Day</h3><p>Today is all about celebrating the incredible person you are.</p></div><div class="card"><div class="icon">🚀</div><h3>New Adventure</h3><p>The next chapter is waiting. Make it unforgettable.</p></div><div class="card"><div class="icon">🌟</div><h3>Bright Future</h3><p>Keep going. The best parts of your story are still loading.</p></div></div><div class="buttons"><button class="btn primary" onclick="go('balloons')">Next Challenge 🎈</button></div></div></section>
-<section class="page" id="balloons"><div class="panel"><div class="badge">🎈 INTERACTIVE GAME</div><h2 class="title">Pop The Balloons!</h2><p class="subtitle">Pop them before they escape into the birthday universe.</p><h3 style="margin-top:15px;color:var(--gold)">Score: <span id="score">0</span></h3><div class="balloon-area" id="balloonArea"></div><div class="buttons"><button class="btn primary" onclick="go('gift')">Find The Gift 🎁</button></div></div></section>
-<section class="page" id="gift"><div class="panel"><div class="badge">🎁 SPECIAL SURPRISE</div><h2 class="title">Open Your Gift</h2><p class="subtitle">There is only one rule: click the gift.</p><div class="gift-wrap" id="giftBox"><div class="gift-box"><div class="ribbon-v"></div><div class="ribbon-h"></div></div><div class="gift-lid"><div class="ribbon-v"></div></div></div><div class="gift-message" id="giftMessage"><h2>✨ Surprise!</h2><p>The greatest gift is not inside this box. It is the memories, friendships, dreams and adventures that the next year of your life will bring.</p></div><div class="buttons"><button class="btn primary" onclick="go('quiz')">Take The Quiz 🧠</button></div></div></section>
-<section class="page" id="quiz"><div class="panel"><div class="badge">🧠 BIRTHDAY CHALLENGE</div><h2 class="title">Birthday Quiz</h2><div class="quiz"><div class="question" id="question"></div><div class="answers" id="answers"></div><p id="quizResult" style="margin-top:20px;color:var(--gold);font-weight:bold"></p></div><div class="buttons"><button class="btn secondary" onclick="restartQuiz()">Restart 🔄</button><button class="btn primary" onclick="go('secret')">Secret Room 🔐</button></div></div></section>
-<section class="page" id="secret"><div class="panel"><div class="lock">🔐</div><div class="badge">CLASSIFIED</div><h2 class="title">Secret Room</h2><p class="subtitle">Enter the secret birthday password to unlock the final message.</p><div class="password-row"><input id="password" type="password" placeholder="Enter password"><button class="btn primary" id="unlock">Unlock</button></div><p id="error" style="color:var(--pink)"></p><div class="secret-message" id="secretMessage"><h2>🎉 SECRET UNLOCKED! 🎉</h2><br><p>Dear Inusha,<br><br>You reached the final room of this little birthday universe.<br><br>May this new year bring you more laughter, more success, more adventures and more unforgettable memories.<br><br>Keep dreaming bigger.<br>Keep smiling.<br>Keep becoming stronger.<br><br>And always remember...<br><strong style="color:var(--gold)">THE BEST PART OF YOUR STORY IS STILL LOADING... 🚀✨</strong></p><div class="buttons"><button class="btn primary" onclick="ultimateParty()">START THE FINAL PARTY 🎆</button></div></div></div></section>
+<canvas id="scene"></canvas>
+<div id="aurora"></div><div id="vignette"></div>
+
+<div class="topbar">
+  <div class="brand"><i class="dot"></i><span>DIVINE ENGINE // V11</span></div>
+  <div class="controls">
+    <button class="btn active" id="quality">AUTO</button>
+    <button class="btn" id="fullscreen">⛶</button>
+  </div>
+</div>
+
+<div class="badge">✦ वृन्दावन • JANMASHTAMI • 2026 ✦</div>
+
+<main class="hero">
+  <div class="om">ॐ</div>
+  <div class="kicker">A NIGHT OF DIVINE JOY</div>
+  <h1>श्री कृष्ण जन्माष्टमी</h1>
+  <div class="subtitle">HARE KRISHNA • RADHE RADHE • JAI SHRI KRISHNA</div>
+  <div class="divider"></div>
+  <div class="subtitle">“Where devotion becomes light, music and motion.”</div>
+</main>
+
+<section class="panel left">
+ <div class="panel-title">Engine Telemetry</div>
+ <div class="stat"><span>Render</span><b id="fps">60 FPS</b></div>
+ <div class="stat"><span>Divine Particles</span><b id="pc">0</b></div>
+ <div class="stat"><span>Physics Nodes</span><b id="nodes">0</b></div>
+ <div class="stat"><span>Memory</span><b id="mem">—</b></div>
+ <div class="meter"><i id="meter"></i></div>
+</section>
+
+<section class="panel right">
+ <div class="panel-title">Janmashtami Controls</div>
+ <div class="action">
+   <button class="btn" id="music">♫ Flute</button>
+   <button class="btn" id="handi">🧈 Dahi Handi</button>
+   <button class="btn" id="petals">🌸 Petals</button>
+ </div>
+ <div class="tip">Drag the hanging handi. Double-click it to celebrate. Move your finger or mouse to create a divine force field.</div>
+</section>
+
+<div class="center-controls">
+ <button class="btn" id="celebrate">✨ CELEBRATE</button>
+ <button class="btn extra" id="diya">🪔 DIYA</button>
+ <button class="btn extra" id="feather">🦚 FEATHER</button>
+</div>
+
+<div id="toast"></div>
+
 <script>
-setTimeout(()=>document.getElementById("loader").classList.add("hidden"),2300);
-const stars=document.getElementById("stars"),starCount=innerWidth<600?60:120;for(let i=0;i<starCount;i++){const s=document.createElement("i");s.className="star";s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";s.style.setProperty("--d",(2+Math.random()*4)+"s");stars.appendChild(s)}
-const pages=["home","universe","balloons","gift","quiz","secret"];
-function go(id){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));if(id==="balloons")createBalloons();if(id==="quiz")loadQuestion();unlockAchievement(id);scrollTo({top:0,behavior:"smooth"})}
-document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>go(b.dataset.page));
-const lines=["Today belongs to you, Inusha. ✨","A new adventure begins right now. 🚀","More smiles. More memories. More happiness. 💖","Welcome to your Birthday Universe. 🌌"];let line=0,char=0,deleting=false;function type(){const text=lines[line],el=document.getElementById("typing");el.textContent=deleting?text.substring(0,char--):text.substring(0,char++);if(!deleting&&char>text.length){deleting=true;setTimeout(type,1200);return}if(deleting&&char<0){deleting=false;line=(line+1)%lines.length}setTimeout(type,deleting?30:65)}type();
-document.querySelectorAll(".card").forEach(card=>{card.addEventListener("mousemove",e=>{if(document.body.classList.contains("low-power"))return;const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`rotateX(${-y*10}deg) rotateY(${x*10}deg) scale(1.03)`});card.addEventListener("mouseleave",()=>card.style.transform="")});
-let score=0;function createBalloons(){const area=document.getElementById("balloonArea");area.innerHTML="";const colors=["#ff3d81","#7c4dff","#3db8ff","#ffd166","#38e0b8"],count=innerWidth<600?10:16;for(let i=0;i<count;i++){const b=document.createElement("div");b.className="balloon";b.style.left=Math.random()*90+"%";b.style.background=colors[Math.floor(Math.random()*colors.length)];b.style.animationDuration=(5+Math.random()*5)+"s";b.onclick=()=>{if(b.classList.contains("pop"))return;b.classList.add("pop");score++;document.getElementById("score").textContent=score;burst(b.offsetLeft+30,b.getBoundingClientRect().top);if(score===5)unlockAchievement("Balloon Master 🎈")};area.appendChild(b)}}
-document.getElementById("giftBox").onclick=function(){this.classList.add("open");document.getElementById("giftMessage").classList.add("show");burst();unlockAchievement("Gift Hunter 🎁")};
-const quiz=[{q:"When is Inusha's birthday celebration?",a:["September 2","January 1","December 25","February 14"],c:0},{q:"What should you do before blowing a birthday candle?",a:["Make a wish","Close the website","Run away","Do homework"],c:0},{q:"What should a new year bring?",a:["New adventures","No dreams","Only boring days","Nothing new"],c:0},{q:"What is the best birthday activity?",a:["Celebrate and enjoy","Be sad","Ignore everyone","Sleep forever"],c:0}];let qi=0,qs=0;function loadQuestion(){if(qi>=quiz.length){document.getElementById("question").textContent="🎉 Quiz Complete!";document.getElementById("answers").innerHTML="";document.getElementById("quizResult").textContent=`Score: ${qs}/${quiz.length}`;if(qs===quiz.length){unlockAchievement("Perfect Score 🏆");burst()}return}const item=quiz[qi],box=document.getElementById("answers");document.getElementById("question").textContent=item.q;box.innerHTML="";item.a.forEach((a,i)=>{const b=document.createElement("div");b.className="answer";b.textContent=a;b.onclick=()=>{[...box.children].forEach(x=>x.style.pointerEvents="none");if(i===item.c){b.classList.add("correct");qs++}else{b.classList.add("wrong");box.children[item.c].classList.add("correct")}setTimeout(()=>{qi++;loadQuestion()},750)};box.appendChild(b)})}function restartQuiz(){qi=0;qs=0;document.getElementById("quizResult").textContent="";loadQuestion()}
-const SECRET="INUSHA2026";document.getElementById("unlock").onclick=unlock;document.getElementById("password").addEventListener("keydown",e=>{if(e.key==="Enter")unlock()});function unlock(){const input=document.getElementById("password");if(input.value.trim().toUpperCase()===SECRET){document.getElementById("secretMessage").classList.add("show");document.getElementById("error").textContent="";unlockAchievement("Secret Explorer 🔐");ultimateParty()}else document.getElementById("error").textContent="Wrong password... try again 👀"}
-const achieved=new Set();function unlockAchievement(name){if(achieved.has(name)||pages.includes(name))return;achieved.add(name);const box=document.getElementById("achievements"),a=document.createElement("div");a.className="achievement show";a.textContent="🏆 Achievement: "+name;box.appendChild(a);setTimeout(()=>a.remove(),4000)}
-const canvas=document.getElementById("fx"),ctx=canvas.getContext("2d");let particles=[];function resize(){canvas.width=innerWidth;canvas.height=innerHeight}addEventListener("resize",resize);resize();class Particle{constructor(x,y,color){this.x=x??Math.random()*canvas.width;this.y=y??Math.random()*canvas.height;this.vx=(Math.random()-.5)*8;this.vy=(Math.random()-.5)*8;this.life=60+Math.random()*35;this.color=color||`hsl(${Math.random()*360},100%,65%)`;this.size=2+Math.random()*3}update(){this.x+=this.vx;this.y+=this.vy;this.vy+=.035;this.vx*=.985;this.life--}draw(){ctx.globalAlpha=Math.max(0,this.life/95);ctx.fillStyle=this.color;ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill()}}function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);particles=particles.filter(p=>p.life>0);particles.forEach(p=>{p.update();p.draw()});ctx.globalAlpha=1;requestAnimationFrame(animate)}animate();function burst(x=canvas.width/2,y=canvas.height/2){if(document.body.classList.contains("low-power"))return;for(let i=0;i<55;i++)particles.push(new Particle(x,y))}function ultimateParty(){for(let i=0;i<10;i++)setTimeout(()=>burst(Math.random()*canvas.width,Math.random()*canvas.height*.75),i*250)}
-document.getElementById("performance").onclick=function(){document.body.classList.toggle("low-power");this.textContent=document.body.classList.contains("low-power")?"⚡ Effects Reduced":"⚡ Performance"};document.addEventListener("keydown",e=>{if(document.activeElement.tagName==="INPUT")return;const current=document.querySelector(".page.active").id,index=pages.indexOf(current);if(e.key==="ArrowRight"&&index<pages.length-1)go(pages[index+1]);if(e.key==="ArrowLeft"&&index>0)go(pages[index-1])});
+(()=>{
+"use strict";
+const c=document.getElementById("scene"),x=c.getContext("2d",{alpha:false});
+let W=0,H=0,D=devicePixelRatio||1,t=0,last=performance.now(),fps=60;
+let quality=1, particles=[], stars=[], petals=[], sparks=[], feathers=[], diyas=[];
+let pointer={x:-9999,y:-9999,down:false}, handi={x:.5,y:.42,vx:0,vy:0,drag:false,broken:false};
+let audio=null,master=null,fluteOn=false,notes=[261.63,293.66,329.63,392,440,493.88,523.25,493.88,440,392,329.63,293.66];
+let noteI=0,nextNote=0;
+
+function resize(){
+ W=innerWidth;H=innerHeight;D=Math.min(devicePixelRatio||1,2);
+ c.width=W*D;c.height=H*D;c.style.width=W+"px";c.style.height=H+"px";x.setTransform(D,0,0,D,0,0);
+ stars=Array.from({length:Math.min(180,Math.floor(W*H/7000))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.4+.2,a:Math.random(),s:Math.random()*2+1}));
+}
+addEventListener("resize",resize);resize();
+
+function rand(a,b){return a+Math.random()*(b-a)}
+function toast(s){let q=document.getElementById("toast");q.textContent=s;q.classList.add("show");clearTimeout(toast.q);toast.q=setTimeout(()=>q.classList.remove("show"),1800)}
+function addParticle(o){particles.push(o)}
+function burst(n=80,cx=W/2,cy=H/2){
+ for(let i=0;i<n;i++){
+  let a=Math.random()*Math.PI*2, sp=rand(.6,4.8);
+  addParticle({x:cx,y:cy,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-1.5,life:rand(35,100),max:100,r:rand(1,3),type:Math.random()<.5?"gold":"blue"});
+ }
+}
+function addPetals(n=80){
+ for(let i=0;i<n;i++)petals.push({x:rand(0,W),y:rand(-H,0),vx:rand(-.35,.35),vy:rand(.35,1.4),r:rand(2,5),rot:rand(0,6.28),vr:rand(-.04,.04),a:rand(.4,.95)});
+}
+addPetals(100);
+
+function background(){
+ let g=x.createRadialGradient(W*.5,H*.45,10,W*.5,H*.45,Math.max(W,H)*.75);
+ g.addColorStop(0,"#170c38");g.addColorStop(.4,"#0b0620");g.addColorStop(1,"#020007");
+ x.fillStyle=g;x.fillRect(0,0,W,H);
+ // atmospheric glow
+ for(let i=0;i<4;i++){
+  let xx=W*(.2+i*.22)+Math.sin(t*.0003+i)*50, yy=H*(.2+i*.08);
+  let rg=x.createRadialGradient(xx,yy,0,xx,yy,Math.min(W,H)*.3);
+  rg.addColorStop(0,i%2?"#00d2ff10":"#7c3cff16");rg.addColorStop(1,"transparent");
+  x.fillStyle=rg;x.fillRect(0,0,W,H);
+ }
+ // moon
+ let mx=W*.78,my=H*.2,r=Math.min(W,H)*.075;
+ x.save();x.shadowBlur=45;x.shadowColor="#d8e8ff";x.fillStyle="#eaf2ff";x.beginPath();x.arc(mx,my,r,0,Math.PI*2);x.fill();
+ x.shadowBlur=0;x.globalAlpha=.15;x.fillStyle="#7080a8";
+ for(let i=0;i<7;i++){x.beginPath();x.arc(mx+rand(-r*.6,r*.6),my+rand(-r*.6,r*.6),rand(3,9),0,7);x.fill()}x.restore();
+ // stars
+ for(const s of stars){s.a+=.015*s.s;let a=.25+.55*(.5+.5*Math.sin(s.a));x.globalAlpha=a;x.fillStyle="#dff8ff";x.beginPath();x.arc(s.x,s.y,s.r,0,7);x.fill()}x.globalAlpha=1;
+ // cloud ribbons
+ x.save();x.globalAlpha=.08;x.filter="blur(15px)";
+ for(let j=0;j<5;j++){x.beginPath();for(let i=-20;i<=20;i++){let xx=i*W/18,yy=H*(.3+j*.07)+Math.sin(i*.45+t*.0004+j)*28;x.lineTo(xx,yy)}x.strokeStyle=j%2?"#00d2ff":"#8b5cff";x.lineWidth=35;x.stroke()}x.restore();
+ // ground temple silhouette
+ x.save();x.fillStyle="#030109";
+ let gy=H*.78;x.fillRect(0,gy,W,H-gy);
+ for(let i=0;i<12;i++){let bx=i*W/11;x.fillRect(bx,gy-35,Math.max(16,W/40),35)}
+ x.beginPath();x.moveTo(W*.42,gy);x.lineTo(W*.5,gy-100);x.lineTo(W*.58,gy);x.fill();
+ x.restore();
+}
+
+function lightStrips(){
+ x.save();x.lineCap="round";
+ for(let k=0;k<2;k++){
+  let y=H*(.73+k*.06);let grad=x.createLinearGradient(0,y,W,y);
+  grad.addColorStop(0,"transparent");grad.addColorStop(.2,k?"#7c3cff55":"#00d2ff55");grad.addColorStop(.5,"#ffffff22");grad.addColorStop(.8,k?"#00d2ff55":"#7c3cff55");grad.addColorStop(1,"transparent");
+  x.strokeStyle=grad;x.shadowBlur=12;x.shadowColor=k?"#7c3cff":"#00d2ff";x.lineWidth=1.2;
+  x.beginPath();x.moveTo(0,y);x.lineTo(W,y+Math.sin(t*.002)*3);x.stroke();
+ }x.restore();
+}
+
+function peacockFeather(cx,cy,s,rot=0){
+ x.save();x.translate(cx,cy);x.rotate(rot);
+ x.lineCap="round";x.lineJoin="round";
+ let pulse=.7+.3*Math.sin(t*.004);
+ x.shadowBlur=18;x.shadowColor="#00d2ff";x.strokeStyle="#00d2ff";x.lineWidth=2;
+ x.beginPath();x.moveTo(0,s*.65);x.bezierCurveTo(-s*.04,s*.25,-s*.13,-s*.2,0,-s*.75);x.bezierCurveTo(s*.3,-s*.55,s*.52,-s*.2,s*.55,s*.2);x.bezierCurveTo(s*.58,s*.52,s*.25,s*.76,0,s*.65);x.stroke();
+ x.shadowColor="#ffd76a";x.strokeStyle="#ffd76a";x.lineWidth=1.4;
+ x.beginPath();x.moveTo(0,s*.62);x.bezierCurveTo(s*.05,s*.25,s*.02,-s*.25,0,-s*.7);x.stroke();
+ x.shadowColor="#7c3cff";x.strokeStyle="#7c3cff";x.beginPath();x.ellipse(0,-s*.23,s*.18,s*.25,0,0,7);x.stroke();
+ x.strokeStyle="#00d2ff";x.globalAlpha=.65+pulse*.2;x.beginPath();x.ellipse(0,-s*.23,s*.09,s*.14,0,0,7);x.stroke();
+ x.restore();
+}
+
+function flute(cx,cy,len){
+ x.save();x.translate(cx,cy);x.rotate(-.12);
+ let glow=9+Math.sin(t*.006)*4;
+ x.lineCap="round";x.shadowBlur=glow;x.shadowColor="#ffd76a";x.strokeStyle="#ffd76a";x.lineWidth=4;
+ x.beginPath();x.moveTo(-len/2,0);x.lineTo(len/2,0);x.stroke();
+ x.shadowBlur=16;x.strokeStyle="#00d2ff";x.lineWidth=1.2;
+ x.beginPath();x.moveTo(-len/2,0);x.lineTo(len/2,0);x.stroke();
+ for(let i=-2;i<=2;i++){let hx=i*len*.13;
+  x.fillStyle="#080018";x.shadowBlur=6;x.shadowColor="#00d2ff";x.beginPath();x.arc(hx,0,4.3,0,7);x.fill()
+ }
+ x.restore();
+}
+
+function drawDiya(cx,cy,s){
+ x.save();x.translate(cx,cy);
+ let flame=.8+.2*Math.sin(t*.01+cx);
+ x.shadowBlur=25;x.shadowColor="#ffb52e";x.fillStyle="#ffb52e";
+ x.beginPath();x.moveTo(0,-s*1.4*flame);x.bezierCurveTo(-s*.5,-s*.65,0,-s*.45,0,-s*.05);x.bezierCurveTo(0,-s*.45,s*.5,-s*.65,0,-s*1.4*flame);x.fill();
+ x.shadowBlur=12;x.fillStyle="#ffd76a";x.beginPath();x.ellipse(0,0,s*.9,s*.3,0,0,7);x.fill();
+ x.fillStyle="#7c2c18";x.beginPath();x.ellipse(0,s*.05,s*.85,s*.25,0,0,7);x.fill();
+ x.restore();
+}
+
+function drawHandi(){
+ let hx=handi.x*W,hy=handi.y*H;
+ if(handi.broken)return;
+ x.save();
+ // ropes
+ x.strokeStyle="#c9a56b";x.lineWidth=2;x.beginPath();x.moveTo(hx-50,0);x.lineTo(hx-32,hy-25);x.moveTo(hx+50,0);x.lineTo(hx+32,hy-25);x.stroke();
+ // hanger
+ x.strokeStyle="#ffd76a";x.beginPath();x.moveTo(hx-32,hy-25);x.quadraticCurveTo(hx,hy-42,hx+32,hy-25);x.stroke();
+ // pot
+ let sway=Math.sin(handi.x*10+t*.003)*4;
+ x.translate(hx+sway,hy);x.shadowBlur=25;x.shadowColor="#ff9e3d77";
+ let grad=x.createLinearGradient(-40,0,40,0);grad.addColorStop(0,"#7d321e");grad.addColorStop(.5,"#c46b38");grad.addColorStop(1,"#702a1b");
+ x.fillStyle=grad;x.beginPath();x.moveTo(-37,-8);x.quadraticCurveTo(-31,38,0,46);x.quadraticCurveTo(31,38,37,-8);x.closePath();x.fill();
+ x.shadowBlur=0;x.strokeStyle="#ffd76a";x.lineWidth=3;x.beginPath();x.ellipse(0,-8,38,10,0,0,7);x.stroke();
+ // butter
+ x.fillStyle="#fff1a8";x.beginPath();x.arc(0,3,11+Math.sin(t*.006)*2,0,7);x.fill();
+ x.restore();
+}
+
+function updateHandi(){
+ if(handi.drag)return;
+ if(handi.broken)return;
+ handi.vy+=.00035;handi.y+=handi.vy;handi.x+=handi.vx;handi.vx*=.985;
+ if(handi.y>.47){handi.y=.47;handi.vy*=-.78}
+}
+
+function shatter(){
+ if(handi.broken)return;
+ handi.broken=true;
+ let hx=handi.x*W,hy=handi.y*H;
+ for(let i=0;i<32;i++){let a=rand(0,7),sp=rand(1,5);sparks.push({x:hx,y:hy,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-2,life:rand(50,120),r:rand(2,6),gold:Math.random()<.5})}
+ burst(130,hx,hy);toast("🧈 Dahi Handi celebrated!");
+ setTimeout(()=>{handi.broken=false;handi.y=.42;handi.vy=0},3500);
+}
+
+function update(){
+ for(let i=particles.length-1;i>=0;i--){let p=particles[i];p.x+=p.vx;p.y+=p.vy;p.vy+=.015;p.vx*=.992;p.life--;if(p.life<0)particles.splice(i,1)}
+ for(let i=petals.length-1;i>=0;i--){let p=petals[i];p.x+=p.vx+Math.sin(t*.003+p.y)*.18;p.y+=p.vy;p.rot+=p.vr;
+  let dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy);
+  if(dist<120&&dist>0){let f=(120-dist)/120*.8;p.x+=dx/dist*f;p.y+=dy/dist*f}
+  if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+ }
+ for(let i=sparks.length-1;i>=0;i--){let p=sparks[i];p.x+=p.vx;p.y+=p.vy;p.vy+=.045;p.life--;if(p.life<0)sparks.splice(i,1)}
+ updateHandi();
+ if(fluteOn&&audio&&audio.state==="running"&&performance.now()>nextNote){playNote(notes[noteI++%notes.length]);nextNote=performance.now()+430}
+}
+
+function render(){
+ background();lightStrips();
+ // feather halo
+ peacockFeather(W*.5,H*.25,Math.min(W,H)*.15,-.2);
+ peacockFeather(W*.12,H*.62,Math.min(W,H)*.09,.65);
+ peacockFeather(W*.88,H*.62,Math.min(W,H)*.09,-.65);
+ flute(W*.5,H*.66,Math.min(W*.62,600));
+ // particles
+ x.save();for(const p of particles){x.globalAlpha=Math.max(0,p.life/p.max);x.fillStyle=p.type==="gold"?"#ffd76a":"#00d2ff";x.shadowBlur=10;x.shadowColor=x.fillStyle;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}x.restore();
+ // petals
+ for(const p of petals){x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.globalAlpha=p.a;x.fillStyle="#ff8bbd";x.shadowBlur=8;x.shadowColor="#ff5e9e";x.beginPath();x.ellipse(0,0,p.r,p.r*.45,0,0,7);x.fill();x.restore()}x.globalAlpha=1;
+ // sparks
+ for(const p of sparks){x.globalAlpha=p.life/120;x.fillStyle=p.gold?"#ffd76a":"#ff8eea";x.shadowBlur=14;x.shadowColor=x.fillStyle;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}x.globalAlpha=1;
+ drawHandi();
+ drawDiya(W*.16,H*.82,13);drawDiya(W*.84,H*.82,13);
+ // pointer field
+ if(pointer.x>0){let rg=x.createRadialGradient(pointer.x,pointer.y,0,pointer.x,pointer.y,110);rg.addColorStop(0,"#00d2ff18");rg.addColorStop(1,"transparent");x.fillStyle=rg;x.beginPath();x.arc(pointer.x,pointer.y,110,0,7);x.fill()}
+}
+
+function loop(now){
+ let dt=Math.min(50,now-last);last=now;t+=dt;fps=60*.92+1000/dt*.08;update();render();
+ document.getElementById("fps").textContent=Math.round(fps)+" FPS";
+ document.getElementById("pc").textContent=(particles.length+petals.length+sparks.length);
+ document.getElementById("nodes").textContent=(handi.broken?32:8+Math.round(particles.length/15));
+ let mem=performance.memory?performance.memory.usedJSHeapSize/1048576:(particles.length+petals.length)*.002+.8;
+ document.getElementById("mem").textContent=mem.toFixed(1)+" MB";
+ document.getElementById("meter").style.width=Math.min(100,Math.max(15,fps/60*100))+"%";
+ requestAnimationFrame(loop)
+}
+requestAnimationFrame(loop);
+
+function point(e){let r=c.getBoundingClientRect();pointer.x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;pointer.y=(e.touches?e.touches[0].clientY:e.clientY)-r.top}
+c.addEventListener("pointermove",point);
+c.addEventListener("pointerdown",e=>{point(e);pointer.down=true;let hx=handi.x*W,hy=handi.y*H;if(!handi.broken&&Math.hypot(pointer.x-hx,pointer.y-hy)<70)handi.drag=true});
+c.addEventListener("pointerup",()=>{pointer.down=false;handi.drag=false});
+c.addEventListener("dblclick",e=>{point(e);let hx=handi.x*W,hy=handi.y*H;if(Math.hypot(pointer.x-hx,pointer.y-hy)<100)shatter();else burst(45,pointer.x,pointer.y)});
+c.addEventListener("pointermove",e=>{if(handi.drag){point(e);handi.x=Math.max(.2,Math.min(.8,pointer.x/W));handi.y=Math.max(.15,Math.min(.58,pointer.y/H));handi.vy=0}});
+c.addEventListener("pointerleave",()=>{pointer.x=-9999;pointer.y=-9999});
+
+document.getElementById("celebrate").onclick=()=>{burst(180,W/2,H*.52);addPetals(80);toast("✨ Radhe Radhe! Jai Shri Krishna!")}
+document.getElementById("petals").onclick=()=>{addPetals(180);toast("🌸 Divine petals released")}
+document.getElementById("handi").onclick=()=>shatter();
+document.getElementById("diya").onclick=()=>{diyas.push({x:rand(.15,.85),y:rand(.55,.85)});burst(30,W*.5,H*.75);toast("🪔 Diya awakened")}
+document.getElementById("feather").onclick=()=>{feathers.push(Date.now());burst(35,W*.5,H*.3);toast("🦚 Peacock blessing")}
+document.getElementById("quality").onclick=()=>{quality=quality===1?.65:quality===.65?.35:1;document.getElementById("quality").textContent=quality===1?"AUTO":quality===.65?"HIGH":"ECO";toast("Quality: "+(quality===1?"AUTO":quality===.65?"HIGH":"ECO"))};
+document.getElementById("fullscreen").onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()};
+
+function initAudio(){
+ if(audio)return;
+ audio=new (window.AudioContext||window.webkitAudioContext)();master=audio.createGain();master.gain.value=.055;master.connect(audio.destination)
+}
+function playNote(freq){
+ if(!audio)return;
+ let o=audio.createOscillator(),g=audio.createGain(),f=audio.createBiquadFilter();
+ o.type="sine";o.frequency.value=freq;f.type="lowpass";f.frequency.value=2200;
+ g.gain.setValueAtTime(0,audio.currentTime);g.gain.linearRampToValueAtTime(.7,audio.currentTime+.03);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.42);
+ o.connect(f);f.connect(g);g.connect(master);o.start();o.stop(audio.currentTime+.45);
+}
+document.getElementById("music").onclick=async()=>{
+ initAudio();if(audio.state==="suspended")await audio.resume();fluteOn=!fluteOn;
+ document.getElementById("music").classList.toggle("active",fluteOn);toast(fluteOn?"♫ Flute meditation ON":"♫ Flute meditation OFF");
+ if(fluteOn){playNote(523.25);nextNote=performance.now()+430}
+};
+
+// Keep it light on smaller screens.
+setInterval(()=>{let max=quality===1?500:quality===.65?330:180;if(petals.length>max)petals.splice(0,petals.length-max);if(particles.length>max)particles.splice(0,particles.length-max)},1000);
+})();
 </script>
 </body>
 </html>
